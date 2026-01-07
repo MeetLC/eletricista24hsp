@@ -1,0 +1,213 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:'Montserrat',sans-serif;
+}
+
+body{
+    background:#0b0b0b;
+    color:#fff;
+    line-height:1.6;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:40px 20px;
+    text-align:center;
+}
+
+.hero{
+    padding-top: 18px;
+    background:linear-gradient(135deg,#f5b300,#ff4b1f);
+}
+
+.hero-img{
+    max-width:480px;
+    margin:25px auto;
+    display:block;
+    border-radius:20px;
+}
+
+.hero h1{
+    font-size:clamp(2rem,5vw,3.5rem);
+}
+
+.subtitle{
+    margin:15px 0;
+    font-size:1.2rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#000;
+    color:#fff;
+    padding:15px 30px;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:700;
+}
+
+.btn-light{
+    background:#fff;
+    color:#000;
+}
+
+.section-img{
+    max-width:420px;
+    margin:30px auto;
+    display:block;
+    border-radius:20px;
+    opacity:.9;
+}
+
+.benefits ul{
+    list-style:none;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;font-size:1.1rem;
+}
+
+.benefits li{
+    background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+    border: 1px solid rgba(255,255,255,.08);
+    padding: 12px 12px;
+  }
+
+.cta{
+    background:#111;
+}
+
+footer{
+    padding:20px;
+    text-align:center;
+    font-size:.9rem;
+    color:#aaa;
+}
+
+.floating-cta{
+  position:fixed;
+  bottom:16px;
+  right: 16px;
+  left:auto;
+  transform:translateX(-50%);
+  background:#25D366;
+  color:#000;
+  padding:14px 24px;
+  border-radius:30px;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 15px 40px rgba(0,0,0,.45);
+  letter-spacing:.3px;
+  z-index:999;
+  transition: .3s ease;
+}
+
+
+/* =========================
+   Mobile polish (<= 480px)
+   ========================= */
+@media (max-width: 480px) {
+
+  body { line-height: 1.65; }
+
+  /* Respiro lateral */
+  .container{
+    padding: 28px 16px;
+    text-align: center;
+  }
+
+  /* HERO: evita ficar “alto demais” e controla a foto */
+  .hero{
+    padding: 26px 16px 22px;
+  }
+
+  /* Imagem do hero: não estoura, fica proporcional e bonita */
+  .hero-img{
+    width: 100%;
+    max-width: 520px;
+    height: 220px;          /* controla a altura no mobile */
+    object-fit: cover;      /* mantém visual profissional */
+    border-radius: 18px;
+    margin: 0 auto 18px;
+    display: block;
+  }
+
+  /* Tipografia: menos “quebra” e mais impacto */
+  .hero h1{
+    font-size: 1.9rem;
+    line-height: 1.15;
+    letter-spacing: -0.3px;
+    margin: 6px auto 8px;
+    max-width: 15ch;
+    letter-spacing: -.5px;
+  }
+
+  .subtitle{
+    font-size: 1rem;
+    opacity: .95;
+    margin: 10px auto 14px;
+    max-width: 28ch; /* evita linhas longas demais */
+  }
+
+  /* Botões: CTA grande e fácil de clicar */
+  .btn{
+    width: 100%;
+    max-width: 360px;
+    padding: 14px 18px;
+    border-radius: 16px;
+    font-size: 1.05rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,.35);
+  }
+
+  /* Seção “problema” com respiro */
+  section h2{
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+
+  section p{
+    font-size: 0.98rem;
+    opacity: .92;
+  }
+
+  /* Imagens das seções: largura total e alinhamento */
+  .section-img{
+    width: 100%;
+    max-width: 520px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin: 18px auto;
+    display: block;
+  }
+
+  /* Benefícios: 2 colunas no mobile fica melhor que 4 itens soltos */
+  .benefits ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    text-align: left;
+    font-size: .98rem;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .benefits li{
+    background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+     border-radius: 14px;
+   padding: 12px 12px;
+  }
+
+  /* CTA final: destaque e consistência */
+  .cta{
+    padding: 28px 16px;
+  }
+
+  footer{
+    padding: 18px 14px;
+    font-size: .82rem;
+  }
+}
